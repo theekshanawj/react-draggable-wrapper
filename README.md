@@ -19,3 +19,4 @@ Other than APIs provided by Drag and Drop API, following are provided
 draggable|Boolean|Allow drag and drop| 
 children|React Node|Children component wrapped by DraggableWrapper|
 id|Any| A unique id to identify the component being dragged|
+rest|Any| Other props to be passed to wrapper if any|

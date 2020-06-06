@@ -38,7 +38,8 @@ Following props main props are accepted
 id|`any`| Uniquely identify a dragging element| `0` |
 isDraggable|`boolean`| Allow drag and drop| `true` |
 handleDragStart|`function: (event, id) => {...}`| Will trigger at `onDragStart` | - |
-handleDrop|`function: (event, id) => {...}`| Will trigger at `onDragOver` | - |
+handleDrop|`function: (event, id) => {...}`| Will trigger at `onDrop` | - |
+handleDragOver|`function: (event, id) => {...}`| Will trigger at `onDragOver` | - |
 handleDragEnter|`function: (event, id) => {...}`| Will trigger at `onDragEnter` | - |
 handleDragLeave|`function: (event, id) => {...}`| Will trigger at `onDragLeave` | - |
 handleDragExit|`function: (event, id) => {...}`| Will trigger at `onDragExit` | - |

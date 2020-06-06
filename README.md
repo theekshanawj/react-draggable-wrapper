@@ -51,5 +51,5 @@ Other than above main props, additional props such as `style`, `data-id` can be 
 
 A reference implementation of a row drag and drop is provided [here](https://github.com/theekshanawj/react-draggable-wrapper/blob/master/sample/App.js). Below is a screen casting of the application.
 
-![Row and Drop](./sample/row-drag-n-drop.gif)
+![Row and Drop](https://github.com/theekshanawj/react-draggable-wrapper/blob/read-me/sample/row-drag-n-drop.gif)
 

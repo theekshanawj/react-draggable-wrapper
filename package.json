@@ -1,0 +1,28 @@
+{
+  "name": "react-draggable-wrapper",
+  "version": "0.0.1",
+  "description": "HTML5 Draggable wrapper for React",
+  "main": "DraggableWrapper.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theekshanawj/react-draggable-wrapper.git"
+  },
+  "keywords": [
+    "React",
+    "HTML5",
+    "WebAPIs",
+    "DragNDrop"
+  ],
+  "author": "Theekshana Wijesinghe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/theekshanawj/react-draggable-wrapper/issues"
+  },
+  "homepage": "https://github.com/theekshanawj/react-draggable-wrapper#readme",
+  "peerDependencies": {
+    "react": "~16.0"
+  }
+}

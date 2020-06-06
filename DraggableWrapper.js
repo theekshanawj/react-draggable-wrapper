@@ -1,11 +1,21 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-// Wrapper div
-const Wrapper = () => <div />;
-
-// empty method
-const noop = () => {};
+/**
+ * Setting the default props.
+ * Id is set to 0 if props does not define it
+ * isDraggable is true if caller does not call isDraggable=true|false explicitly
+ * @param props Props passed
+ * @return {object} Props with default props
+ */
+const defaultProps = (props) => {
+  const id = props.id || 0;
+  const isDraggable = props.isDraggable === undefined ? true : props.isDraggable;
+  return {
+    ...props,
+    id,
+    isDraggable,
+  }
+};
 
 const DraggableWrapper = (props) => {
   const {
@@ -20,47 +30,23 @@ const DraggableWrapper = (props) => {
     handleDragEnd,
     id,
     ...rest
-  } = props;
+  } = defaultProps(props);
+
   return (
-    <Wrapper
-      {...rest}
-      draggable={isDraggable}
-      onDragStart={(e) => handleDragStart && handleDragStart(e, id)}
-      onDrop={(e) => handleDrop && handleDrop(e, id)}
-      onDragOver={(e) => handleDragOver && handleDragOver(e, id)}
-      onDragEnter={(e) => handleDragEnter && handleDragEnter(e, id)}
-      onDragLeave={(e) => handleDragLeave && handleDragLeave(e, id)}
-      onDragExit={(e) => handleDragExit && handleDragExit(e, id)}
-      onDragEnd={(e) => handleDragEnd && handleDragEnd(e, id)}
-    >
-      {children}
-    </Wrapper>
+      <div
+          draggable={isDraggable}
+          onDragStart={(e) => handleDragStart && handleDragStart(e, id)}
+          onDrop={(e) => handleDrop && handleDrop(e, id)}
+          onDragOver={(e) => handleDragOver && handleDragOver(e, id)}
+          onDragEnter={(e) => handleDragEnter && handleDragEnter(e, id)}
+          onDragLeave={(e) => handleDragLeave && handleDragLeave(e, id)}
+          onDragExit={(e) => handleDragExit && handleDragExit(e, id)}
+          onDragEnd={(e) => handleDragEnd && handleDragEnd(e, id)}
+          {...rest}
+      >
+        {children}
+      </div>
   );
-};
-
-DraggableWrapper.propTypes = {
-  children: PropTypes.node.isRequired,
-  isDraggable: PropTypes.bool,
-  handleDragStart: PropTypes.func,
-  handleDrop: PropTypes.func,
-  handleDragOver: PropTypes.func,
-  handleDragEnter: PropTypes.func,
-  handleDragLeave: PropTypes.func,
-  handleDragExit: PropTypes.func,
-  handleDragEnd: PropTypes.func,
-  id: PropTypes.any,
-};
-
-DraggableWrapper.defaultProps = {
-  isDraggable: false,
-  handleDragStart: noop,
-  handleDrop: noop,
-  handleDragOver: noop,
-  handleDragEnter: noop,
-  handleDragLeave: noop,
-  handleDragExit: noop,
-  handleDragEnd: noop,
-  id: 0,
 };
 
 export default DraggableWrapper;

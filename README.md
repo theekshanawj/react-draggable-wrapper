@@ -43,7 +43,7 @@ handleDragOver|`function: (event, id) => {...}`| Will trigger at `onDragOver` | 
 handleDragEnter|`function: (event, id) => {...}`| Will trigger at `onDragEnter` | - |
 handleDragLeave|`function: (event, id) => {...}`| Will trigger at `onDragLeave` | - |
 handleDragExit|`function: (event, id) => {...}`| Will trigger at `onDragExit` | - |
-handleDragEnd|`function: (event, id) => {...}`| Will trigger at `onDragStart` | - |
+handleDragEnd|`function: (event, id) => {...}`| Will trigger at `onDragEnd` | - |
 
 Other than above main props, additional props such as `style`, `data-id` can be passed to the wrapper.
 

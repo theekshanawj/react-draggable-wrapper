@@ -1,6 +1,6 @@
 {
   "name": "react-draggable-wrapper",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "HTML5 Draggable wrapper for React",
   "main": "index.js",
   "scripts": {
